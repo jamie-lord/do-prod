@@ -99,19 +99,18 @@ body {
     box-shadow: none !important;
 }
 
-.btn-edit, .btn-incomplete {
+.btn-task-options {
     color: #6c757d;
     background-color: transparent;
 }
 
-    .btn-edit:hover, .btn-incomplete:hover, .btn-delete:hover, .btn-complete:hover {
-        filter: brightness(75%);
+    .btn-task-options:focus {
+        box-shadow: none;
     }
 
-.btn-delete {
-    color: #dc3545;
-    background-color: transparent;
-}
+    .btn-task-options:hover, .btn-complete:hover {
+        filter: brightness(75%);
+    }
 
 .btn-complete {
     color: #28a745;
@@ -170,14 +169,15 @@ a:focus {
         padding: 10px;
     }
 
-    #sidebar ul li a {
+    #sidebar ul li a, #sidebar ul li label {
         padding: 10px;
         font-size: 1.1em;
         display: block;
     }
 
-        #sidebar ul li a:hover {
+        #sidebar ul li a:hover, #sidebar ul li label:hover {
             background: #fff;
+            cursor: pointer;
         }
 
     #sidebar ul li.active > a,
@@ -214,15 +214,8 @@ ul.CTAs {
         margin-bottom: 5px;
     }
 
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
-
-a.article,
-a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
+.version-number {
+    padding: 10px;
 }
 
 #content {
