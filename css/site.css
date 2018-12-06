@@ -145,7 +145,8 @@ a:focus {
 #sidebar {
     width: 250px;
     position: fixed;
-    top: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     left: 0;
     height: 100vh;
     z-index: 999;
@@ -173,13 +174,13 @@ a:focus {
     padding: 10px;
 }
 
-#sidebar ul li > div {
+#sidebar ul li > div, #sidebar ul li > label, #sidebar ul li > a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
 }
 
-    #sidebar ul li > div:hover {
+    #sidebar ul li > div:hover, #sidebar ul li > label:hover, #sidebar ul li > a:hover {
         background: #fff;
         cursor: pointer;
     }
